@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Articles</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Articles</h1>
+        <form id="filter-form">
+            <input type="text" id="search" placeholder="Search articles...">
+            <select id="category">
+                <option value="">All Categories</option>
+                <option value="tech">Technology</option>
+                <option value="health">Health</option>
+                <option value="finance">Finance</option>
+            </select>
+            <button type="submit">Filter</button>
+        </form>
+        <div id="article-cards">
+            <div class="card">
+                <h2>Article Title 1</h2>
+                <p>Short description of the article...</p>
+                <a href="#">Read more...</a>
+            </div>
+            <div class="card">
+                <h2>Article Title 2</h2>
+                <p>Short description of the article...</p>
+                <a href="#">Read more...</a>
+            </div>
+            <!-- More article cards can be added here -->
+        </div>
+        <div class="pagination">
+            <a href="#">&laquo; Previous</a>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">Next &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>
