@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manuscript Submission</title>
+</head>
+<body>
+    <h1>Manuscript Submission Form</h1>
+    <form action="/submit" method="post" enctype="multipart/form-data">
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" required><br><br>
+
+        <label for="category">Category:</label><br>
+        <select id="category" name="category" required>
+            <option value="research">Research</option>
+            <option value="review">Review</option>
+            <option value="case_study">Case Study</option>
+        </select><br><br>
+
+        <label for="abstract">Abstract:</label><br>
+        <textarea id="abstract" name="abstract" rows="4" required></textarea><br><br>
+
+        <label for="author_name">Author Name:</label><br>
+        <input type="text" id="author_name" name="author_name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="file">Upload File:</label><br>
+        <input type="file" id="file" name="file" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
