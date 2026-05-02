@@ -1,0 +1,18 @@
+# Python Dependencies
+*.pyc
+__pycache__/
+
+# Virtual Environment
+venv/
+.env
+
+# Environment Variables
+.env
+
+# Database Files
+*.sqlite3
+
+# IDE Files
+.idea/
+*.iml
+*.vscode/
