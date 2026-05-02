@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meida Shuk Homepage</title>
+    <script>
+        async function loadFeaturedArticles() {
+            const response = await fetch('https://api.example.com/featured');
+            const articles = await response.json();
+            const featuredSection = document.getElementById('featured-articles');
+            articles.forEach(article => {
+                const articleElement = document.createElement('div');
+                articleElement.innerHTML = `<h3>${article.title}</h3><p>${article.summary}</p>`;
+                featuredSection.appendChild(articleElement);
+            });
+        }
+
+        async function loadLatestArticles() {
+            const response = await fetch('https://api.example.com/latest');
+            const articles = await response.json();
+            const latestSection = document.getElementById('latest-articles');
+            articles.forEach(article => {
+                const articleElement = document.createElement('div');
+                articleElement.innerHTML = `<h3>${article.title}</h3><p>${article.summary}</p>`;
+                latestSection.appendChild(articleElement);
+            });
+        }
+
+        async function loadCategories() {
+            const response = await fetch('https://api.example.com/categories');
+            const categories = await response.json();
+            const categoriesSection = document.getElementById('categories');
+            categories.forEach(category => {
+                const categoryElement = document.createElement('div');
+                categoryElement.innerHTML = `<h4>${category.name}</h4>`;
+                categoriesSection.appendChild(categoryElement);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadFeaturedArticles();
+            loadLatestArticles();
+            loadCategories();
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Meida Shuk Homepage</h1>
+    </header>
+    <main>
+        <section id="featured-articles">
+            <h2>Featured Articles</h2>
+        </section>
+        <section id="latest-articles">
+            <h2>Latest Articles</h2>
+        </section>
+        <section id="categories">
+            <h2>Categories</h2>
+        </section>
+    </main>
+</body>
+</html>
